@@ -7,6 +7,7 @@ import (
 	pb "github.com/EwanValentine/shippy-user-service/proto/user"
 	micro "github.com/micro/go-micro"
 	"github.com/micro/go-micro/broker"
+	_ "github.com/micro/go-plugins/broker/nats"
 )
 
 const topic = "user.created"
