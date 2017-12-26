@@ -28,6 +28,7 @@ func main() {
 		log.Fatalf("Broker Connect error: %v", err)
 	}
 
+	// Subscribe to messages on the broker
 	_, err := broker.Subscribe(topic, func(p broker.Publication) error {
 		var user *pb.User
 		if err := json.Unmarshal(p.Message().Body, user); err != nil {
